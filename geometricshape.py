@@ -17,6 +17,11 @@ while(cap.isOpened()):
 
      #""" draw circle (frame  , center  coordinates , radius  , BGR color code , thickness)"""
      frame = cv2.circle(frame , (320,240) , (240) , (0,0,255),-1)
+     font = cv2.FONT_HERSHEY_SIMPLEX # font style
+	# """to out text to in image cmd-> cv2.putText(image  , ('text') , (starting cordinates),font,font size,(color),thickness,line type)""" 
+	frame = cv2.putText(frame  , ('deepanshu ') , (10,150) ,font ,  3, (200,251,32), 5 , cv2.LINE_AA)
+	   
+        
      print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
      print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
      cv2.imshow('frame' , frame)
