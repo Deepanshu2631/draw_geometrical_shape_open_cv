@@ -1,5 +1,9 @@
+import numoy as np 
 import cv2
 cap = cv2.VideoCapture(0)
+ """to give black image cmd-> np.zeroes([hieght  , width ,  3 ] , data type)"""
+#cap=np.zeroes([512  , 512 , 3 ] , np.uint8)
+
 print(cap.isOpened())
 while(cap.isOpened()):
     ret , frame = cap.read()
